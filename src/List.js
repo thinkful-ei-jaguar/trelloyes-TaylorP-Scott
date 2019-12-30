@@ -1,5 +1,8 @@
 import React from 'react';
-import Card from './Card'
+import Card from './Card';
+
+
+
 
 function List(props) {
   console.log(props);
@@ -9,7 +12,9 @@ function List(props) {
           <h2>{props.header}</h2>
         </header>
         <div className="List-cards">
-          {/* <Card props/> */}
+          {props.cards.map(item => (
+            <Card key={props.allCards[item].id} title={props.allCards[item].title} content={props.allCards[item].content} />
+        ))}
         </div>
       </section>
   )
