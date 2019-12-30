@@ -2,13 +2,14 @@ import React from 'react';
 import Card from './Card'
 
 function List(props) {
+  console.log(props);
   return (
-    <section class="List">
-        <header class="List-header">
+    <section className="List">
+        <header className="List-header">
           <h2>{props.header}</h2>
         </header>
-        <div class="List-cards">
-          {Card}
+        <div className="List-cards">
+          {/* <Card props/> */}
         </div>
       </section>
   )
